@@ -31,8 +31,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           
-      - name: Deploy only Titanic.html to S3
-        run: aws s3 cp Titanic.html s3://${{ secrets.S3_BUCKET }}/Titanic.html
+      - name: Deploy only house_prices.html to S3
+        run: aws s3 cp house_prices.html s3://${{ secrets.S3_BUCKET }}/house_prices.html
         
     #   - name: Invalidate cache
     #     run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/house_prices.html"
